@@ -30,3 +30,23 @@ userIcon.onclick = () => {
     cart.classList.remove('open')
     menu.classList.remove("move")
 }
+
+// On Click On Menu Links Removed Menu
+window.onscroll = () => {
+    navbar.classList.remove('active')
+    menu.classList.remove('move')
+}
+
+// Change Header Background Color And Shadow On Scroll
+let header = document.querySelector('header')
+
+window.addEventListener('scroll', () => {
+    header.classList.toggle('shadow', window.scrollY > 0)
+})
+
+// Scroll Top
+const scrollTop = document.querySelector('.scroll-top')
+
+window.addEventListener('scroll', () => {
+    scrollTop.classList.toggle('active', window.scrollY > 0)
+})
